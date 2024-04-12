@@ -2,9 +2,9 @@
 
 
 ```shell
+# 安装 viet
 # electron 模板
 yarn create @quick-start/electron
-
 yarn install
 ```
 
@@ -14,6 +14,7 @@ yarn install
 ```
 yarn dev
 ```
+
 
 打包
 

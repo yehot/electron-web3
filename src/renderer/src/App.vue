@@ -2,6 +2,7 @@
 import Versions from './components/Versions.vue'
 
 const ipcHandle = () => window.electron.ipcRenderer.send('ping')
+import { create_eth_wallet } from '@bridge/web3_bridge'
 </script>
 
 <template>
