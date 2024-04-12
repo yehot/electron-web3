@@ -1,8 +1,11 @@
 import { contextBridge } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
+import create_eth_wallet from '../web3/wallet/create_eth_wallet'
 
 // Custom APIs for renderer
-const api = {}
+const api = {
+  create_eth_wallet
+}
 
 // Use `contextBridge` APIs to expose Electron APIs to
 // renderer only if context isolation is enabled, otherwise
