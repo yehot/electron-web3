@@ -13,7 +13,8 @@ export default defineConfig({
     resolve: {
       alias: {
         '@renderer': resolve('src/renderer/src'),
-        '@bridge': resolve('src/renderer/bridge')
+        '@bridge': resolve('src/renderer/bridge'),
+        '@web3': resolve('src/main/web3')
       }
     },
     plugins: [vue()]
