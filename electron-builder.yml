@@ -1,4 +1,4 @@
-appId: com.electron.app
+appId: com.jazz.btc
 productName: electron-web3
 directories:
   buildResources: build

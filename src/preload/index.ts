@@ -1,6 +1,6 @@
 import { contextBridge } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
-import create_eth_wallet from '../web3/wallet/create_eth_wallet'
+import create_eth_wallet from '../main/web3/wallet/create_eth_wallet'
 
 // Custom APIs for renderer
 const api = {

@@ -1,7 +1,8 @@
 import bip39 from 'bip39'
 import fs from 'fs'
-import ExcelJS from "exceljs"
-import {hdkey} from "ethereumjs-wallet";
+import ExcelJS from 'exceljs'
+import { hdkey } from 'ethereumjs-wallet'
+const { shell } = require('electron')
 
 class WalletInfo {
   constructor(mnemonic, privateKey, address) {
@@ -12,9 +13,7 @@ class WalletInfo {
 }
 
 // 要创建的钱包数量
-function create_wallets(walletCount) {
-
-  console.log('11');
+async function create_wallets(walletCount) {
   // 创建新的 Excel 文件
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet('Wallet Info');
@@ -46,8 +45,19 @@ function create_wallets(walletCount) {
   }
 
   const currentDateTime = getCurrentDateTime();
-  const filename = `wallet_${currentDateTime}.xlsx`;
-  save_excel(workbook, filename);
+
+  const dirPath = __dirname
+  const filename = `${dirPath}/wallet_${currentDateTime}.xlsx`;
+  await save_excel(workbook, filename)
+
+  console.log(dirPath)
+  // 打开文件目录
+  shell.openPath(dirPath).then((r) => {
+    console.log(r)
+  })
+  // shell.showItemInFolder(filename)
+
+  console.log('打开目录2')
 }
 
 
@@ -58,15 +68,16 @@ function add_excel_header(worksheet) {
   worksheet.getCell('C1').value = '地址';
 }
 
-function save_excel(workbook, filename) {
+async function save_excel(workbook, filename) {
   // 保存 Excel 文件
-  workbook.xlsx.writeFile(filename)
+  await workbook.xlsx
+    .writeFile(filename)
     .then(() => {
-      console.log('创建新的 ' + filename + ' 文件并写入钱包信息成功');
+      console.log('创建新的 ' + filename + ' 文件并写入钱包信息成功')
     })
     .catch((error) => {
-      console.error('写入文件时出错:', error);
-    });
+      console.error('写入文件时出错:', error)
+    })
 }
 
 function add_excel_row(worksheet, info) {
