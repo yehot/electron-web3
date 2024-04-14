@@ -19,7 +19,7 @@
           <el-menu-item
             v-for="(item2, index2) in item.child"
             :key="index2"
-            :index="item2.frontpath"
+            :index="item2.frontPath"
           >
             <el-icon>
               <component :is="item2.icon"></component>
@@ -28,7 +28,7 @@
           </el-menu-item>
         </el-sub-menu>
 
-        <el-menu-item v-else :index="item.frontpath">
+        <el-menu-item v-else :index="item.frontPath">
           <el-icon>
             <component :is="item.icon"></component>
           </el-icon>
@@ -44,6 +44,7 @@ import { router } from '@renderer/router/index.js'
 import { useStore } from 'vuex'
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { asideMenus } from '@renderer/router/sideMenu'
 
 const route = useRoute()
 const store = useStore()
@@ -51,37 +52,6 @@ const store = useStore()
 const isCollapse = computed(() => !(store.state.asideWidth === '250px'))
 
 const defaultActive = ref(route.path)
-
-// const asideMenus = computed(() => store.state.menus)
-const asideMenus = [
-  {
-    name: '钱包',
-    icon: 'help',
-    child: [
-      {
-        name: '首页',
-        icon: 'home-filled',
-        frontpath: '/'
-      },
-      {
-        name: '余额查询',
-        icon: 'shopping-cart-full',
-        frontpath: '/goods/list'
-      }
-    ]
-  },
-  // {
-  //   name: '商城管理',
-  //   icon: 'shopping-bag',
-  //   child: [
-  //     {
-  //       name: '商品管理',
-  //       icon: 'shopping-cart-full',
-  //       frontpath: '/goods/list'
-  //     }
-  //   ]
-  // }
-]
 
 const handleSelect = (e) => {
   router.push(e)
