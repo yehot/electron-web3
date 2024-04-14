@@ -2,6 +2,10 @@
 import Versions from './components/Versions.vue'
 import { create_eth_wallet } from '@bridge/web3_bridge'
 const ipcHandle = () => create_eth_wallet(1)
+const test = () => {
+  console.log("1")
+  console.log("2")
+}
 </script>
 
 <template>
@@ -17,6 +21,9 @@ const ipcHandle = () => create_eth_wallet(1)
   <div class="actions">
     <div class="action">
       <a href="https://electron-vite.org/" target="_blank" rel="noreferrer">Documentation</a>
+    </div>
+    <div class="action">
+      <a target="_blank" rel="noreferrer" @click="test">测试</a>
     </div>
     <div class="action">
       <a target="_blank" rel="noreferrer" @click="ipcHandle">Send IPC</a>

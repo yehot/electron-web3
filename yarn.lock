@@ -269,6 +269,10 @@
     minimatch "^3.0.4"
     plist "^3.0.4"
 
+"@element-plus/icons-vue@^2.1.0":
+  version "2.3.1"
+  resolved "https://registry.npmjs.org/@element-plus/icons-vue/-/icons-vue-2.3.1.tgz#1f635ad5fdd5c85ed936481525570e82b5a8307a"
+
 "@esbuild/aix-ppc64@0.19.12":
   version "0.19.12"
   resolved "https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.19.12.tgz#d1bc06aedb6936b3b6d313bf809a5a40387d2b7f"
@@ -696,6 +700,10 @@
     "@types/node" "*"
     "@types/responselike" "^1.0.0"
 
+"@types/cookie@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/@types/cookie/-/cookie-0.6.0.tgz#eac397f28bf1d6ae0ae081363eca2f425bedf0d5"
+
 "@types/debug@^4.1.6":
   version "4.1.12"
   resolved "https://registry.npmjs.org/@types/debug/-/debug-4.1.12.tgz#a155f21690871953410df4b6b6f53187f0500917"
@@ -778,6 +786,10 @@
 "@types/verror@^1.10.3":
   version "1.10.10"
   resolved "https://registry.npmjs.org/@types/verror/-/verror-1.10.10.tgz#d5a4b56abac169bfbc8b23d291363a682e6fa087"
+
+"@types/web-bluetooth@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.npmjs.org/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz#f066abfcd1cbe66267cdbbf0de010d8a41b41597"
 
 "@types/yauzl@^2.9.1":
   version "2.10.3"
@@ -871,25 +883,6 @@
   version "5.0.4"
   resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.0.4.tgz#508d6a0f2440f86945835d903fcc0d95d1bb8a37"
 
-"@volar/language-core@1.11.1", "@volar/language-core@~1.11.1":
-  version "1.11.1"
-  resolved "https://registry.npmjs.org/@volar/language-core/-/language-core-1.11.1.tgz#ecdf12ea8dc35fb8549e517991abcbf449a5ad4f"
-  dependencies:
-    "@volar/source-map" "1.11.1"
-
-"@volar/source-map@1.11.1", "@volar/source-map@~1.11.1":
-  version "1.11.1"
-  resolved "https://registry.npmjs.org/@volar/source-map/-/source-map-1.11.1.tgz#535b0328d9e2b7a91dff846cab4058e191f4452f"
-  dependencies:
-    muggle-string "^0.3.1"
-
-"@volar/typescript@~1.11.1":
-  version "1.11.1"
-  resolved "https://registry.npmjs.org/@volar/typescript/-/typescript-1.11.1.tgz#ba86c6f326d88e249c7f5cfe4b765be3946fd627"
-  dependencies:
-    "@volar/language-core" "1.11.1"
-    path-browserify "^1.0.1"
-
 "@vue/compiler-core@3.4.21":
   version "3.4.21"
   resolved "https://registry.npmjs.org/@vue/compiler-core/-/compiler-core-3.4.21.tgz#868b7085378fc24e58c9aed14c8d62110a62be1a"
@@ -900,7 +893,7 @@
     estree-walker "^2.0.2"
     source-map-js "^1.0.2"
 
-"@vue/compiler-dom@3.4.21", "@vue/compiler-dom@^3.3.0":
+"@vue/compiler-dom@3.4.21":
   version "3.4.21"
   resolved "https://registry.npmjs.org/@vue/compiler-dom/-/compiler-dom-3.4.21.tgz#0077c355e2008207283a5a87d510330d22546803"
   dependencies:
@@ -928,6 +921,10 @@
     "@vue/compiler-dom" "3.4.21"
     "@vue/shared" "3.4.21"
 
+"@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.5.1":
+  version "6.6.1"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.6.1.tgz#7c14346383751d9f6ad4bea0963245b30220ef83"
+
 "@vue/eslint-config-prettier@^9.0.0":
   version "9.0.0"
   resolved "https://registry.npmjs.org/@vue/eslint-config-prettier/-/eslint-config-prettier-9.0.0.tgz#f63394f8f7759d92b6ef3f3e1d30ff6b0c0b97c1"
@@ -943,21 +940,7 @@
     "@typescript-eslint/parser" "^6.7.0"
     vue-eslint-parser "^9.3.1"
 
-"@vue/language-core@1.8.27":
-  version "1.8.27"
-  resolved "https://registry.npmjs.org/@vue/language-core/-/language-core-1.8.27.tgz#2ca6892cb524e024a44e554e4c55d7a23e72263f"
-  dependencies:
-    "@volar/language-core" "~1.11.1"
-    "@volar/source-map" "~1.11.1"
-    "@vue/compiler-dom" "^3.3.0"
-    "@vue/shared" "^3.3.0"
-    computeds "^0.0.1"
-    minimatch "^9.0.3"
-    muggle-string "^0.3.1"
-    path-browserify "^1.0.1"
-    vue-template-compiler "^2.7.14"
-
-"@vue/reactivity@3.4.21":
+"@vue/reactivity@3.4.21", "@vue/reactivity@^3.3.4":
   version "3.4.21"
   resolved "https://registry.npmjs.org/@vue/reactivity/-/reactivity-3.4.21.tgz#affd3415115b8ebf4927c8d2a0d6a24bccfa9f02"
   dependencies:
@@ -985,9 +968,36 @@
     "@vue/compiler-ssr" "3.4.21"
     "@vue/shared" "3.4.21"
 
-"@vue/shared@3.4.21", "@vue/shared@^3.3.0":
+"@vue/shared@3.4.21":
   version "3.4.21"
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.4.21.tgz#de526a9059d0a599f0b429af7037cd0c3ed7d5a1"
+
+"@vueuse/core@10.9.0", "@vueuse/core@^10.4.1":
+  version "10.9.0"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-10.9.0.tgz#7d779a95cf0189de176fee63cee4ba44b3c85d64"
+  dependencies:
+    "@types/web-bluetooth" "^0.0.20"
+    "@vueuse/metadata" "10.9.0"
+    "@vueuse/shared" "10.9.0"
+    vue-demi ">=0.14.7"
+
+"@vueuse/integrations@^10.4.1":
+  version "10.9.0"
+  resolved "https://registry.npmjs.org/@vueuse/integrations/-/integrations-10.9.0.tgz#2b1a9556215ad3c1f96d39cbfbef102cf6e0ec05"
+  dependencies:
+    "@vueuse/core" "10.9.0"
+    "@vueuse/shared" "10.9.0"
+    vue-demi ">=0.14.7"
+
+"@vueuse/metadata@10.9.0":
+  version "10.9.0"
+  resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-10.9.0.tgz#769a1a9db65daac15cf98084cbf7819ed3758620"
+
+"@vueuse/shared@10.9.0":
+  version "10.9.0"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-10.9.0.tgz#13af2a348de15d07b7be2fd0c7fc9853a69d8fe0"
+  dependencies:
+    vue-demi ">=0.14.7"
 
 "@xmldom/xmldom@^0.8.8":
   version "0.8.10"
@@ -1157,6 +1167,14 @@ asynckit@^0.4.0:
 at-least-node@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
+
+axios@^1.5.1:
+  version "1.6.8"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 balanced-match@^1.0.0:
   version "1.0.2"
@@ -1479,10 +1497,6 @@ compress-commons@^4.1.2:
     normalize-path "^3.0.0"
     readable-stream "^3.6.0"
 
-computeds@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/computeds/-/computeds-0.0.1.tgz#215b08a4ba3e08a11ff6eee5d6d8d7166a97ce2e"
-
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
@@ -1497,6 +1511,10 @@ config-file-ts@^0.2.4:
 convert-source-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
+
+cookie@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-0.6.0.tgz#2798b04b071b0ecbff0dbb62a505a8efa4e19051"
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -1563,10 +1581,6 @@ csstype@^3.1.3:
 dayjs@^1.8.34:
   version "1.11.10"
   resolved "https://registry.npmjs.org/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
-
-de-indent@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
 
 debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -1674,6 +1688,13 @@ duplexer2@~0.1.4:
 eastasianwidth@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/eastasianwidth/-/eastasianwidth-0.2.0.tgz#696ce2ec0aa0e6ea93a397ffcf24aa7840c827cb"
+
+echarts@^5.4.3:
+  version "5.5.0"
+  resolved "https://registry.npmjs.org/echarts/-/echarts-5.5.0.tgz#c13945a7f3acdd67c134d8a9ac67e917830113ac"
+  dependencies:
+    tslib "2.3.0"
+    zrender "5.5.0"
 
 ejs@^3.1.8:
   version "3.1.10"
@@ -2122,6 +2143,10 @@ flatted@^3.2.9:
   version "3.3.1"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.3.1.tgz#21db470729a6734d4997002f439cb308987f567a"
 
+follow-redirects@^1.15.6:
+  version "1.15.6"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+
 foreground-child@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/foreground-child/-/foreground-child-3.1.1.tgz#1d173e776d75d2772fed08efe4a0de1ea1b12d0d"
@@ -2318,6 +2343,10 @@ graphemer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmjs.org/graphemer/-/graphemer-1.4.0.tgz#fb2f1d55e0e3a1849aeffc90c4fa0dd53a0e66c6"
 
+gsap@^3.12.2:
+  version "3.12.5"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz#136c02dad4c673b441bdb1ca00104bfcb4eae7f4"
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -2360,10 +2389,6 @@ hasown@^2.0.0:
   resolved "https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz#003eaf91be7adc372e84ec59dc37252cedb80003"
   dependencies:
     function-bind "^1.1.2"
-
-he@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -2776,7 +2801,7 @@ minimatch@^5.0.1, minimatch@^5.1.0, minimatch@^5.1.1:
   dependencies:
     brace-expansion "^2.0.1"
 
-minimatch@^9.0.1, minimatch@^9.0.3:
+minimatch@^9.0.1:
   version "9.0.4"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.4.tgz#8e49c731d1749cbec05050ee5145147b32496a51"
   dependencies:
@@ -2821,10 +2846,6 @@ ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
 
-muggle-string@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.npmjs.org/muggle-string/-/muggle-string-0.3.1.tgz#e524312eb1728c63dd0b2ac49e3282e6ed85963a"
-
 nanoid@^3.3.7:
   version "3.3.7"
   resolved "https://registry.npmjs.org/nanoid/-/nanoid-3.3.7.tgz#d0c301a691bc8d54efa0a2226ccf3fe2fd656bd8"
@@ -2856,6 +2877,10 @@ normalize-path@^3.0.0:
 normalize-url@^6.0.1:
   version "6.1.0"
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
 
 nth-check@^2.1.1:
   version "2.1.1"
@@ -2909,10 +2934,6 @@ parent-module@^1.0.0:
   resolved "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
   dependencies:
     callsites "^3.0.0"
-
-path-browserify@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz#d98454a9c3753d5790860f16f68867b9e46be1fd"
 
 path-exists@^4.0.0:
   version "4.0.0"
@@ -3010,6 +3031,10 @@ promise-retry@^2.0.1:
   dependencies:
     err-code "^2.0.2"
     retry "^0.12.0"
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
 
 pump@^3.0.0:
   version "3.0.0"
@@ -3429,6 +3454,10 @@ ts-api-utils@^1.0.1:
   version "1.3.0"
   resolved "https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.3.0.tgz#4b490e27129f1e8e686b45cc4ab63714dc60eea1"
 
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+
 tslib@^2.6.2:
   version "2.6.2"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
@@ -3454,6 +3483,13 @@ typescript@^5.3.3:
 undici-types@~5.26.4:
   version "5.26.5"
   resolved "https://registry.npmjs.org/undici-types/-/undici-types-5.26.5.tgz#bcd539893d00b56e964fd2657a4866b221a65617"
+
+universal-cookie@^6.1.1:
+  version "6.1.3"
+  resolved "https://registry.npmjs.org/universal-cookie/-/universal-cookie-6.1.3.tgz#891386460f4407f8443d416d07f7334440c5516c"
+  dependencies:
+    "@types/cookie" "^0.6.0"
+    cookie "^0.6.0"
 
 universalify@^0.1.0:
   version "0.1.2"
@@ -3525,6 +3561,10 @@ vite@^5.0.12:
   optionalDependencies:
     fsevents "~2.3.3"
 
+vue-demi@>=0.14.7:
+  version "0.14.7"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.7.tgz#8317536b3ef74c5b09f268f7782e70194567d8f2"
+
 vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.2:
   version "9.4.2"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-9.4.2.tgz#02ffcce82042b082292f2d1672514615f0d95b6d"
@@ -3537,20 +3577,11 @@ vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.2:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-template-compiler@^2.7.14:
-  version "2.7.16"
-  resolved "https://registry.npmjs.org/vue-template-compiler/-/vue-template-compiler-2.7.16.tgz#c81b2d47753264c77ac03b9966a46637482bb03b"
+vue-router@^4.2.4:
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.3.0.tgz#d5913f27bf68a0a178ee798c3c88be471811a235"
   dependencies:
-    de-indent "^1.0.2"
-    he "^1.2.0"
-
-vue-tsc@^1.8.27:
-  version "1.8.27"
-  resolved "https://registry.npmjs.org/vue-tsc/-/vue-tsc-1.8.27.tgz#feb2bb1eef9be28017bb9e95e2bbd1ebdd48481c"
-  dependencies:
-    "@volar/typescript" "~1.11.1"
-    "@vue/language-core" "1.8.27"
-    semver "^7.5.4"
+    "@vue/devtools-api" "^6.5.1"
 
 vue@^3.4.15:
   version "3.4.21"
@@ -3561,6 +3592,12 @@ vue@^3.4.15:
     "@vue/runtime-dom" "3.4.21"
     "@vue/server-renderer" "3.4.21"
     "@vue/shared" "3.4.21"
+
+vuex@^4.0.2:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/vuex/-/vuex-4.1.0.tgz#aa1b3ea5c7385812b074c86faeeec2217872e36c"
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.11"
 
 which@^2.0.1:
   version "2.0.2"
@@ -3646,3 +3683,9 @@ zip-stream@^4.1.0:
     archiver-utils "^3.0.4"
     compress-commons "^4.1.2"
     readable-stream "^3.6.0"
+
+zrender@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.npmjs.org/zrender/-/zrender-5.5.0.tgz#54d0d6c4eda81a96d9f60a9cd74dc48ea026bc1e"
+  dependencies:
+    tslib "2.3.0"

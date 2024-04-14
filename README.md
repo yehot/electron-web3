@@ -25,7 +25,7 @@ yarn build
 
 
 
-TODO List
+## TODO List
 
 1、添加 vue route 、vue 二级菜单
 2、数据存储模块，
@@ -46,4 +46,14 @@ TODO List
 
 
 https://cn.electron-vite.org/guide/
+
+
+## 问题 list
+
+1、在 webstorm 里配置 debug 断点 attach 问题：
+https://cn.electron-vite.org/guide/debugging
+
+VSCode 可以同时调试 main 和 render 线程
+
+2、vue 配置的 alias @ 路径，功能上生效了，但是 webstorm 无法跳转代码
 
