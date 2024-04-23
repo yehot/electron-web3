@@ -27,7 +27,7 @@ export const RouteDefine = {
   admin: new Route('/', '首页'),
   wallet: {
     creator: new Route('/wallet/creator', '创建钱包'),
-    info: new Route('/wallet/info', '钱包地址管理'),
+    info: new Route('/wallet/info', '钱包信息查看'),
     manager: new Route('/wallet/manager', '钱包地址管理')
   }
 }

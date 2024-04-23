@@ -3,3 +3,4 @@ dist
 out
 .DS_Store
 *.log*
+api_key.json

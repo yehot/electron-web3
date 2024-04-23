@@ -23,6 +23,8 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "@okxweb3/coin-base": "^1.0.7",
+    "@okxweb3/crypto-lib": "^1.0.1",
     "bip39": "^3.1.0",
     "ethereumjs-wallet": "^1.0.2",
     "exceljs": "^4.3.0"
